@@ -1,0 +1,27 @@
+
+import pandas as pd
+import seaborn as sns
+import os
+
+def download_iris_data():
+    """Seaborn'dan Iris veri setini indir"""
+    
+    # Veri dizinlerini oluştur
+    os.makedirs('data/raw', exist_ok=True)
+    
+    # Seaborn'dan Iris veri setini yükle
+    df = sns.load_dataset('iris')
+    
+    # Ham veriyi kaydet
+    df.to_csv(r'ds360\data\raw_data\iris.csv', index=False)
+
+    
+    print("✅ Iris veri seti indirildi: data/raw/iris.csv")
+    print(f"Veri boyutu: {df.shape}")
+    print(f"Kolonlar: {list(df.columns)}")
+    print(f"Eksik değerler:\n{df.isnull().sum()}")
+    
+    return df
+
+if __name__ == "__main__":
+    download_iris_data()
