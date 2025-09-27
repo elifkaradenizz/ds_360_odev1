@@ -1,0 +1,49 @@
+schema: '2.0'
+stages:
+  download:
+    cmd: python src/download_iris.py
+    outs:
+    - path: data/raw_data/iris.csv
+      hash: md5
+      md5: 500a0acbd112b7c512929eac892f9864
+      size: 4009
+  preprocess:
+    cmd: python src/data_processing.py
+    deps:
+    - path: data/raw_data/iris.csv
+      hash: md5
+      md5: 500a0acbd112b7c512929eac892f9864
+      size: 4009
+    - path: src/data_processing.py
+      hash: md5
+      md5: 0cac7f6a04f62e52b00a7933cfab916b
+      size: 1724
+    outs:
+    - path: data/preprocessed_data/iris_clean.csv
+      hash: md5
+      md5: 522d3ad5324345b61b55f3554afbaaf6
+      size: 13685
+  train_model:
+    cmd: python src/modelling.py
+    deps:
+    - path: data/preprocessed_data/iris_clean.csv
+      hash: md5
+      md5: 522d3ad5324345b61b55f3554afbaaf6
+      size: 13685
+    - path: src/modelling.py
+      hash: md5
+      md5: b2d24cfe8df03485caaea3f218a5bb88
+      size: 3264
+    outs:
+    - path: models/features.json
+      hash: md5
+      md5: ea3c20f022b3be53d2fdc0a8f7c72249
+      size: 77
+    - path: models/metrics.json
+      hash: md5
+      md5: ba381751b2a3bf6a8d62bc1ee5a7599b
+      size: 212
+    - path: models/random_forest_iris_model.pkl
+      hash: md5
+      md5: 87ee966d3672a88890fcc2657abda857
+      size: 168081

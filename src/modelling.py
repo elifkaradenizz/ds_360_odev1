@@ -9,8 +9,8 @@ import json
 import os
 
 def train_iris_model(model_type='random_forest',
-                     input_path=r'C:\Users\karad\Desktop\iris_dataset_ds\ds360\data\preprocessed_data\iris_clean.csv',
-                     output_dir=r'C:\Users\karad\Desktop\iris_dataset_ds\ds360\models'):
+                     input_path=r'data\preprocessed_data\iris_clean.csv',
+                     output_dir=r'models'):
     """Iris veri seti üzerinde model eğit, kaydet ve metrikleri JSON olarak sakla"""
     
     # Veri yükleme

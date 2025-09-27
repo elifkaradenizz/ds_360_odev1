@@ -1,0 +1,23 @@
+stages:
+  download:
+    cmd: python src/download_iris.py
+    outs:
+      - data/raw_data/iris.csv
+
+  preprocess:
+    cmd: python src/data_processing.py
+    deps:
+      - data/raw_data/iris.csv
+      - src/data_processing.py
+    outs:
+      - data/preprocessed_data/iris_clean.csv
+
+  train_model:
+    cmd: python src/modelling.py
+    deps:
+      - data/preprocessed_data/iris_clean.csv
+      - src/modelling.py
+    outs:
+      - models/random_forest_iris_model.pkl
+      - models/metrics.json
+      - models/features.json

@@ -13,7 +13,7 @@ def download_iris_data():
     df = sns.load_dataset('iris')
     
     # Ham veriyi kaydet
-    df.to_csv(r'ds360\data\raw_data\iris.csv', index=False)
+    df.to_csv(r'data\raw_data\iris.csv', index=False)
 
     
     print("✅ Iris veri seti indirildi: data/raw/iris.csv")

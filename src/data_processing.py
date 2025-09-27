@@ -3,8 +3,8 @@ import os
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 
 def clean_iris_data():
-    input_path = r"C:\Users\karad\Desktop\iris_dataset_ds\ds360\data\raw_data\iris.csv"
-    output_path = r"C:\Users\karad\Desktop\iris_dataset_ds\ds360\data\preprocessed_data\iris_clean.csv"
+    input_path = r"data\raw_data\iris.csv"
+    output_path = r"data\preprocessed_data\iris_clean.csv"
 
     # 1️⃣ Dosyanın varlığını kontrol et
     if not os.path.exists(input_path):
