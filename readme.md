@@ -44,7 +44,10 @@ ds360\Scripts\activate     # Windows
 
 2. Gerekli paketleri yükleyin:
 
-`pip install -r requirements.txt`
+```
+pip install -r requirements.txt
+
+```
 
 **Gerekli paketler:**  
 - pandas  
@@ -92,13 +95,17 @@ Projeyi baştan sona çalıştırmak için DVC pipeline oluşturabilirsiniz:
 2. **train_model**: Modeli eğit ve kaydet  
 
 **Pipeline’ı çalıştırmak için:**  
-`dvc repro`
+```dvc repro
+```
 
 **Değişiklikleri görmek için:**  
-`dvc status`
+```
+dvc status
+```
 
 **Remote’a göndermek için:**  
-`dvc push`
+```dvc push
+```
 
 
 ---
