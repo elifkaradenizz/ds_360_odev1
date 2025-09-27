@@ -6,6 +6,7 @@ Bu proje, **Iris veri seti** üzerinde veri işleme ve makine öğrenimi süreci
 
 ## 📁 Proje Yapısı
 
+```
 IRIS_DATASET_DS/  
 ├─ data/  
 │  ├─ raw_data/                  # Ham verilerin saklandığı klasör  
@@ -28,6 +29,8 @@ IRIS_DATASET_DS/
 ├─ requirements.txt               # Projede kullanılan paketler  
 └─ README.md                      # Proje dokümantasyonu
 
+```
+
 ---
 
 ## ⚙️ Kurulum
@@ -37,6 +40,7 @@ IRIS_DATASET_DS/
 python -m venv ds360
 source ds360/bin/activate  # macOS/Linux
 ds360\Scripts\activate     # Windows
+```
 
 2. Gerekli paketleri yükleyin:
 
