@@ -95,7 +95,8 @@ Projeyi baştan sona çalıştırmak için DVC pipeline oluşturabilirsiniz:
 2. **train_model**: Modeli eğit ve kaydet  
 
 **Pipeline’ı çalıştırmak için:**  
-```dvc repro
+```
+dvc repro
 ```
 
 **Değişiklikleri görmek için:**  
@@ -104,7 +105,8 @@ dvc status
 ```
 
 **Remote’a göndermek için:**  
-```dvc push
+```
+dvc push
 ```
 
 
